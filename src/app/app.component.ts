@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
     <app-layout>
-      Application works
+      <app-home></app-home>
     </app-layout>
   `,
   styleUrls: ['./app.component.less']
