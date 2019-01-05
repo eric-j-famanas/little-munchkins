@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
     <app-layout>
       <mat-sidenav-container>
         <mat-sidenav #sidenav role="navigation">
-          <!--this is a place for us to add side-nav code-->
+          <app-sidenav-list (sidenavClose)="sidenav.close()"></app-sidenav-list>
         </mat-sidenav>
         <mat-sidenav-content>
           <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
@@ -20,5 +20,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  title = 'little-munchkins';
 }
