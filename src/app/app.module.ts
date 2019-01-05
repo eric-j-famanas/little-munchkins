@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
 import { LayoutModule } from './layout/layout.module';
 import { MaterialModule } from './material/material.module';
+import { NavigationModule } from './navigation/navigation.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,8 @@ import { MaterialModule } from './material/material.module';
     BrowserAnimationsModule,
     LayoutModule,
     HomeModule,
+    MaterialModule,
+    NavigationModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
