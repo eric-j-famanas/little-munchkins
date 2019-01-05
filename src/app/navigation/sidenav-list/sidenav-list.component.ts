@@ -17,14 +17,6 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
         <span class="nav-caption">Account Actions</span>
       </a>
     </mat-nav-list>
-    <mat-list-item [matMenuTriggerFor]="menu">
-      <mat-icon>unfold_more</mat-icon>
-      <a matline>Example</a>
-    </mat-list-item>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item (click)="onSidenavClose()">View profile</button>
-      <button mat-menu-item (click)="onSidenavClose()">Add contact</button>
-    </mat-menu>
   `,
   styleUrls: ['./sidenav-list.component.less']
 })
