@@ -18,7 +18,9 @@ import { PathData, pathNameDataSet } from './routing/path-name-data';
           <app-header
             [pathRoutes]="_pageRoutes"
             [pathData]="_pathData"
-            (sidenavToggle)="sidenav.toggle()"></app-header>
+            (sidenavToggle)="sidenav.toggle()">
+          </app-header>
+          <app-footer fxFlexOffset="auto"></app-footer>
           <main>
             <router-outlet></router-outlet>
           </main>

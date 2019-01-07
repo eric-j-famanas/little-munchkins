@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Route } from '@angular/router';
-import { pageRoutes } from '../../routing/app-routing.module';
 import { PathData } from '../../routing/path-name-data';
 import { formatName } from '../../utilities/string-formatters';
 
