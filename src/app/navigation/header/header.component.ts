@@ -1,4 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Route, Routes } from '@angular/router';
+import { pageRoutes } from '../../app-routing.module';
 
 @Component({
   selector: 'app-header',
@@ -14,11 +16,8 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
       </div>
       <div fxFlex fxLayout fxLayoutAlign="end" fxHide fxShow.gt-xs>
         <ul fxLayout fxLayoutGap="15px" class="navigation-items">
-          <li>
-            <a routerLink="/owner">Owner Actions</a>
-          </li>
-          <li>
-            <a routerLink="/account">Account Actions</a>
+          <li *ngFor="let _page of _pageRoutes">
+            <a routerLink="/{{_page.path}}">{{this.formatName(_page.path)}}</a>
           </li>
         </ul>
       </div>
@@ -28,14 +27,29 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  constructor() {
+  }
+
   @Output() sidenavToggle: EventEmitter<void> = new EventEmitter<void>();
 
-  constructor() { }
+  public _pageRoutes: Array<Route> = pageRoutes;
 
   ngOnInit() {
   }
 
   public onToggleSidenav(): void {
     this.sidenavToggle.emit();
+  }
+
+  public formatName(pathName: string): string {
+    let headerName = '';
+    for (let i = 0; i < pathName.length; i++) {
+      if (i === 0 || pathName[i - 1] === '-') {
+        headerName += pathName[i].toLocaleUpperCase();
+      } else {
+        headerName += pathName[i];
+      }
+    }
+    return headerName;
   }
 }

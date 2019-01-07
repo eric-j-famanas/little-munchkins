@@ -3,10 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeModule } from './pages/home/home.module';
 import { LayoutModule } from './layout/layout.module';
 import { MaterialModule } from './material/material.module';
 import { NavigationModule } from './navigation/navigation.module';
+import { PagesModule } from './pages/pages.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,7 @@ import { NavigationModule } from './navigation/navigation.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     LayoutModule,
-    HomeModule,
+    PagesModule,
     MaterialModule,
     NavigationModule,
   ],

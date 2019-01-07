@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { AppRoutingModule } from '../../app-routing.module';
 import { MaterialModule } from '../../material/material.module';
 import { HeaderComponent } from './header.component';
 
@@ -12,6 +13,7 @@ import { HeaderComponent } from './header.component';
     CommonModule,
     MaterialModule,
     FlexLayoutModule,
+    AppRoutingModule,
   ],
   exports: [
     HeaderComponent,

@@ -3,9 +3,14 @@ import { CommonModule } from '@angular/common';
 import { PlansComponent } from './plans.component';
 
 @NgModule({
-  declarations: [PlansComponent],
+  declarations: [
+    PlansComponent
+  ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    PlansComponent,
   ]
 })
 export class PlansModule { }
