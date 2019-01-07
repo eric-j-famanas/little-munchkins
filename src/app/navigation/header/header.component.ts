@@ -1,6 +1,8 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { Route, Routes } from '@angular/router';
-import { pageRoutes } from '../../app-routing.module';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Route } from '@angular/router';
+import { pageRoutes } from '../../routing/app-routing.module';
+import { PathData } from '../../routing/path-name-data';
+import { formatName } from '../../utilities/string-formatters';
 
 @Component({
   selector: 'app-header',
@@ -16,8 +18,8 @@ import { pageRoutes } from '../../app-routing.module';
       </div>
       <div fxFlex fxLayout fxLayoutAlign="end" fxHide fxShow.gt-xs>
         <ul fxLayout fxLayoutGap="15px" class="navigation-items">
-          <li *ngFor="let _page of _pageRoutes">
-            <a routerLink="/{{_page.path}}">{{this.formatName(_page.path)}}</a>
+          <li *ngFor="let route of pathRoutes">
+            <a routerLink="/{{route.path}}">{{pathData.get(route.path).viewName}}</a>
           </li>
         </ul>
       </div>
@@ -32,7 +34,9 @@ export class HeaderComponent implements OnInit {
 
   @Output() sidenavToggle: EventEmitter<void> = new EventEmitter<void>();
 
-  public _pageRoutes: Array<Route> = pageRoutes;
+  @Input() pathRoutes: Array<Route>;
+
+  @Input() pathData: Map<string, PathData>;
 
   ngOnInit() {
   }
@@ -42,14 +46,6 @@ export class HeaderComponent implements OnInit {
   }
 
   public formatName(pathName: string): string {
-    let headerName = '';
-    for (let i = 0; i < pathName.length; i++) {
-      if (i === 0 || pathName[i - 1] === '-') {
-        headerName += pathName[i].toLocaleUpperCase();
-      } else {
-        headerName += pathName[i];
-      }
-    }
-    return headerName;
+    return formatName(pathName);
   }
 }

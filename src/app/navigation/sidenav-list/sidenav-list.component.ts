@@ -1,21 +1,17 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Route } from '@angular/router';
+import { PathData } from '../../routing/path-name-data';
 
 @Component({
   selector: 'app-sidenav-list',
   template: `
     <mat-nav-list>
-      <a mat-list-item routerLink="/home" (click)="onSidenavClose()">
-        <mat-icon>home</mat-icon>
-        <span class="nav-caption">Home</span>
+      <span *ngFor="let route of pathRoutes">
+        <a mat-list-item routerLink="/{{route.path}}" (click)="onSidenavClose()">
+        <mat-icon>{{pathData.get(route.path).icon}}</mat-icon>
+        <span class="nav-caption">{{pathData.get(route.path).viewName}}</span>
       </a>
-      <a mat-list-item routerLink="/owner" (click)="onSidenavClose()">
-        <mat-icon>assignment_ind</mat-icon>
-        <span class="nav-caption">Owner Actions</span>
-      </a>
-      <a mat-list-item routerLink="#" (click)="onSidenavClose()">
-        <mat-icon>account_balance</mat-icon>
-        <span class="nav-caption">Account Actions</span>
-      </a>
+      </span>
     </mat-nav-list>
   `,
   styleUrls: ['./sidenav-list.component.less']
@@ -27,10 +23,14 @@ export class SidenavListComponent implements OnInit {
 
   @Output() sidenavClose: EventEmitter<void> = new EventEmitter<void>();
 
+  @Input() pathRoutes: Array<Route>;
+
+  @Input() pathData: Map<string, PathData>;
+
   ngOnInit() {
   }
 
   public onSidenavClose = () => {
     this.sidenavClose.emit();
-  }
+  };
 }
