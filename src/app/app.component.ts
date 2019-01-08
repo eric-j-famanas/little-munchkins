@@ -8,22 +8,24 @@ import { PathData, pathNameDataSet } from './routing/path-name-data';
   template: `
     <app-layout>
       <mat-sidenav-container>
-        <mat-sidenav #sidenav role="navigation">
+        <mat-sidenav #sidenav role="navigation" class="all-wrap">
           <app-sidenav-list
             [pathRoutes]="_pageRoutes"
             [pathData]="_pathData"
             (sidenavClose)="sidenav.close()"></app-sidenav-list>
         </mat-sidenav>
         <mat-sidenav-content>
-          <app-header
-            [pathRoutes]="_pageRoutes"
-            [pathData]="_pathData"
-            (sidenavToggle)="sidenav.toggle()">
-          </app-header>
-          <app-footer fxFlexOffset="auto"></app-footer>
-          <main>
-            <router-outlet></router-outlet>
-          </main>
+          <div class="page-wrap">
+            <app-header
+              [pathRoutes]="_pageRoutes"
+              [pathData]="_pathData"
+              (sidenavToggle)="sidenav.toggle()">
+            </app-header>
+            <main class="content">
+              <router-outlet></router-outlet>
+            </main>
+            <app-footer></app-footer>
+          </div>
         </mat-sidenav-content>
       </mat-sidenav-container>
     </app-layout>

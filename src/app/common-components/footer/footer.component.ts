@@ -3,8 +3,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-footer',
   template: `
-    <footer class="mat-toolbar">
-      I am the footer
+    <footer class="app-footer">
+      <app-footer-content></app-footer-content>
     </footer>
   `,
   styleUrls: ['./footer.component.less']
