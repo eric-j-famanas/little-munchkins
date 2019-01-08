@@ -15,4 +15,4 @@ import { LayoutModule } from './layout/layout.module';
     FooterModule,
   ]
 })
-export class CommonComponentsModule { }
+export class GeneralModule { }
