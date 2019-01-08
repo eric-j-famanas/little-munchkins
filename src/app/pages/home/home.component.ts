@@ -6,13 +6,13 @@ import { Component, OnInit } from '@angular/core';
     <section fxLayout="column wrap">
       <mat-tab-group (selectedTabChange)="executeSelectedChange($event)">
         <mat-tab label="Competitive Rates">
-          <p>Competitive Rates</p>
+          <app-rates-feature></app-rates-feature>
         </mat-tab>
         <mat-tab label="Certified Services">
-          <p>Certified Services</p>
+          <app-services-feature></app-services-feature>
         </mat-tab>
         <mat-tab label="Fun Activites">
-          <p>Fun Activites</p>
+          <app-activities-feature></app-activities-feature>
         </mat-tab>
       </mat-tab-group>
     </section>
