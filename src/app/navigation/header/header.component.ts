@@ -13,7 +13,7 @@ import { formatName } from '../../utilities/string-formatters';
         </button>
       </div>
       <div>
-        <a routerLink="/home">Owner-Account</a>
+        <a routerLink="/home">Logo</a>
       </div>
       <div fxFlex fxLayout fxLayoutAlign="end" fxHide fxShow.gt-xs>
         <ul fxLayout fxLayoutGap="15px" class="navigation-items">

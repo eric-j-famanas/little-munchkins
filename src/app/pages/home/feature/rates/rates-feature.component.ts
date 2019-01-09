@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { PathNames } from '../../../../routing/path-name-data';
 
 @Component({
   selector: 'app-rates-feature',
   template: `
-    <app-feature>
+    <app-feature [routerLink]="pathName">
       <div style="color: black">Rates Feature Works</div>
     </app-feature>
   `,
@@ -11,7 +12,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RatesFeatureComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
+
+  public pathName: string = PathNames.plans;
 
   ngOnInit() {
   }

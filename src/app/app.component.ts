@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Route } from '@angular/router';
-import { pageRoutes } from './routing/app-routing.module';
-import { PathData, pathNameDataSet } from './routing/path-name-data';
+import { pageRoutes, PathData, pathNameDataSet } from './routing/path-name-data';
 
 @Component({
   selector: 'app-root',
