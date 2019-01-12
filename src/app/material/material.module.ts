@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import {
-  MatButtonModule,
+  MatButtonModule, MatDialogModule,
   MatIconModule,
   MatListModule,
   MatMenuModule,
@@ -21,6 +21,7 @@ import {
     MatButtonModule,
     MatListModule,
     MatMenuModule,
+    MatDialogModule,
   ],
   exports: [
     MatTabsModule,
@@ -30,6 +31,7 @@ import {
     MatButtonModule,
     MatListModule,
     MatMenuModule,
+    MatDialogModule,
   ],
 })
 export class MaterialModule {

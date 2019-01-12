@@ -7,10 +7,12 @@ import { MaterialModule } from './material/material.module';
 import { NavigationModule } from './navigation/navigation.module';
 import { PagesModule } from './pages/pages.module';
 import { AppRoutingModule } from './routing/app-routing.module';
+import { SocialMediaComponent } from './general/footer/social-media/social-media.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    SocialMediaComponent,
   ],
   imports: [
     BrowserModule,
