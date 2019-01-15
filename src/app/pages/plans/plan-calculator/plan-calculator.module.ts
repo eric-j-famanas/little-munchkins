@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { MaterialModule } from '../../../material/material.module';
-import { PlanCalculatorDialogComponent } from './plan-calculator-dialog.component';
-import { PlanCalculatorComponent } from './plan-calculator.component';
+import { PlanCalculatorDialogComponent } from './dialog/plan-calculator-dialog.component';
+import { PlanCalculatorComponent } from './component/plan-calculator.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { PlanCalculatorComponent } from './plan-calculator.component';
   ],
   imports: [
     CommonModule,
+    FormsModule,
     MaterialModule,
   ],
   exports: [
