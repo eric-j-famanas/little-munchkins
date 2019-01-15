@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ContentTemplateModule } from '../../general/content-template/content-template.module';
 import { AboutComponent } from './about.component';
 
 @NgModule({
@@ -7,7 +8,8 @@ import { AboutComponent } from './about.component';
     AboutComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ContentTemplateModule,
   ],
   exports: [
     AboutComponent,

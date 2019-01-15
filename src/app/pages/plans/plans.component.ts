@@ -1,16 +1,26 @@
 import { Component, OnInit } from '@angular/core';
+import { IContentTemplate } from '../../general/content-template/content-template';
 
 @Component({
   selector: 'app-plans',
   template: `
-    <app-plan-calculator></app-plan-calculator>
+    <div class="content-wrapper">
+      <app-content-template [headerTitle]="headerTitle" [subHeaderTitle]="subHeaderTitle">
+        Plan Picture
+      </app-content-template>
+      <app-plan-calculator></app-plan-calculator>
+    </div>
   `,
   styleUrls: ['./plans.component.less']
 })
-export class PlansComponent implements OnInit {
+export class PlansComponent implements IContentTemplate, OnInit {
 
   constructor() {
   }
+
+  public headerTitle = 'Our Plans and Pricing';
+
+  public subHeaderTitle = 'Fantastic Care at Competitive Rates';
 
   ngOnInit() {
   }

@@ -30,7 +30,7 @@ export class SidenavListComponent implements OnInit {
   ngOnInit() {
   }
 
-  public onSidenavClose = () => {
+  public onSidenavClose() {
     this.sidenavClose.emit();
-  };
+  }
 }

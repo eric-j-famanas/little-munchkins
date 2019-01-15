@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ContentTemplateModule } from '../../general/content-template/content-template.module';
 import { DayToDayComponent } from './day-to-day.component';
 
 @NgModule({
@@ -7,7 +8,8 @@ import { DayToDayComponent } from './day-to-day.component';
     DayToDayComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ContentTemplateModule
   ],
   exports: [
     DayToDayComponent
