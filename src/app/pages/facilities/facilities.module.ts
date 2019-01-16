@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ContentTemplateModule } from '../../general/content-template/content-template.module';
+import { ContentModule } from '../../general/content/content.module';
 import { FacilitiesComponent } from './facilities.component';
 
 @NgModule({
@@ -9,7 +9,7 @@ import { FacilitiesComponent } from './facilities.component';
   ],
   imports: [
     CommonModule,
-    ContentTemplateModule
+    ContentModule
   ],
   exports: [
     FacilitiesComponent

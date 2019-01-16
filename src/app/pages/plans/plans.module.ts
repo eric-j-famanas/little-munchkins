@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { ContentTemplateModule } from '../../general/content-template/content-template.module';
+import { ContentModule } from '../../general/content/content.module';
 import { PlanCalculatorModule } from './plan-calculator/plan-calculator.module';
 import { PlansComponent } from './plans.component';
 
@@ -11,7 +11,7 @@ import { PlansComponent } from './plans.component';
   imports: [
     CommonModule,
     PlanCalculatorModule,
-    ContentTemplateModule,
+    ContentModule,
   ]
 })
 export class PlansModule {

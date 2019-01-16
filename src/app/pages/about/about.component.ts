@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IContentTemplate } from '../../general/content-template/content-template';
+import { IContentTemplate } from '../../general/content/content-template';
 
 @Component({
   selector: 'app-about',
@@ -8,6 +8,8 @@ import { IContentTemplate } from '../../general/content-template/content-templat
       <app-content-template [headerTitle]="headerTitle" [subHeaderTitle]="subHeaderTitle">
         Policies Picture
       </app-content-template>
+      <app-content-parapgraph [contentParagraph]="firstParagraph"></app-content-parapgraph>
+      <app-content-parapgraph [contentParagraph]="secondParagraph"></app-content-parapgraph>
     </div>
   `,
   styleUrls: ['./about.component.less']
@@ -19,6 +21,10 @@ export class AboutComponent implements IContentTemplate, OnInit {
 
   public headerTitle: string = 'Our Business, Our People';
   public subHeaderTitle: string = 'We Treat Your Little Munchkins as Our Own';
+
+  public firstParagraph = 'We take great pride in our setting, providing safe and secure facilities and homely atmosphere.';
+  public secondParagraph = 'Our staff is here to ensure that all children’s lives are enriched as best as possible,' +
+    'believing that every child should have the greatest start they can to help them in life.';
 
   ngOnInit() {
   }
