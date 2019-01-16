@@ -8,7 +8,9 @@ import { IContentTemplate } from '../../general/content-template/content-templat
       <app-content-template [headerTitle]="headerTitle" [subHeaderTitle]="subHeaderTitle">
         Plan Picture
       </app-content-template>
-      <app-plan-calculator></app-plan-calculator>
+      <div class="calculator-wrapper">
+        <app-plan-calculator></app-plan-calculator>
+      </div>
     </div>
   `,
   styleUrls: ['./plans.component.less']
