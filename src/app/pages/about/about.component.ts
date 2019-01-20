@@ -10,6 +10,11 @@ import { IContentTemplate } from '../../general/content/content-template/content
       </app-content-template>
       <app-content-parapgraph [contentParagraph]="firstParagraph"></app-content-parapgraph>
       <app-content-parapgraph [contentParagraph]="secondParagraph"></app-content-parapgraph>
+      <app-profile-card
+        [profileSrc]="'assets/staff/test.jpg'"
+        [position]="'test position'"
+        [subtitle]="'testSubtitle'">
+      </app-profile-card>
     </div>
   `,
   styleUrls: ['./about.component.less']
