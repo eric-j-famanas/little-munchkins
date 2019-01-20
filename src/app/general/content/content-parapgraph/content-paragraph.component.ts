@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
       <p>
         {{ contentParagraph }}
       </p>
+      <ng-content></ng-content>
     </div>
   `,
   styleUrls: ['./content-paragraph.component.less']
