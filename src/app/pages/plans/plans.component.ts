@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IContentTemplate } from '../../general/content/content-template';
+import { IContentTemplate } from '../../general/content/content-template/content-template';
 
 @Component({
   selector: 'app-plans',
@@ -26,8 +26,8 @@ export class PlansComponent implements IContentTemplate, OnInit {
   public subHeaderTitle = 'Fantastic Care at Competitive Rates';
 
   public contentParagraph = 'We offer nursery and preschool care for children ages 6 months to 5 years old' +
-    'and before/ after school club for children age up to 12 years. We drop off and collect children from local primary schools' +
-    '(St. John’s Primary and Huntingdon Primary School).';
+    'and before / after school club for children age up to 12 years. We drop off and collect children from local primary schools' +
+    ' (St. John’s Primary and Huntingdon Primary School).';
 
   ngOnInit() {
   }

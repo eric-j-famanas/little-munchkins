@@ -1,7 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import {
-  MatButtonModule, MatDialogModule,
+  MatButtonModule,
+  MatCardModule,
+  MatDialogModule,
   MatIconModule,
   MatListModule,
   MatMenuModule,
@@ -22,6 +25,8 @@ import {
     MatListModule,
     MatMenuModule,
     MatDialogModule,
+    MatCardModule,
+    FlexLayoutModule,
   ],
   exports: [
     MatTabsModule,
@@ -32,6 +37,8 @@ import {
     MatListModule,
     MatMenuModule,
     MatDialogModule,
+    MatCardModule,
+    FlexLayoutModule,
   ],
 })
 export class MaterialModule {

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IContentTemplate } from '../../general/content/content-template';
+import { IContentTemplate } from '../../general/content/content-template/content-template';
 
 @Component({
   selector: 'app-day-to-day',

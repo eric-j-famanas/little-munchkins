@@ -18,7 +18,7 @@ import { formatName } from '../../utilities/string-formatters';
       <div fxFlex fxLayout fxLayoutAlign="end" fxHide fxShow.gt-xs>
         <ul fxLayout fxLayoutGap="15px" class="navigation-items">
           <li *ngFor="let route of pathRoutes">
-            <a routerLink="/{{route.path}}">{{pathData.get(route.path).viewName}}</a>
+            <a routerLink="/{{route.path}}">{{pathData.get(route.path)!.viewName}}</a>
           </li>
         </ul>
       </div>
