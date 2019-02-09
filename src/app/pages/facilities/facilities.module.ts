@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ContentModule } from '../../general/content/content.module';
+import { LightboxWrapperModule } from '../../general/lightbox-wrapper/lightbox-wrapper.module';
 import { FacilitiesComponent } from './facilities.component';
 
 @NgModule({
@@ -9,7 +10,8 @@ import { FacilitiesComponent } from './facilities.component';
   ],
   imports: [
     CommonModule,
-    ContentModule
+    ContentModule,
+    LightboxWrapperModule,
   ],
   exports: [
     FacilitiesComponent

@@ -28,6 +28,7 @@
             ],
             "styles": [
               "src/styles.less",
+              "./node_modules/ngx-lightbox/lightbox.css"
             ],
             "scripts": []
           },

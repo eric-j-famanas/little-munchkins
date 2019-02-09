@@ -1,19 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { IContentTemplate } from '../../general/content/content-template/content-template';
+import { FacilitiesAlbum, features } from './facilities-data';
 
 @Component({
   selector: 'app-facilities',
   template: `
     <div class="content-wrapper">
       <app-content-template [headerTitle]="headerTitle" [subHeaderTitle]="subHeaderTitle">
-        Facilties Picture
+        Facilities Picture
       </app-content-template>
       <app-content-parapgraph [contentParagraph]="contentParagraph">
         <ul>
-          <li *ngFor="let feature of features">{{feature}}</li>
+          <li *ngFor="let feature of _features">{{feature}}</li>
         </ul>
+        <app-lightbox-wrapper [album]="_album"></app-lightbox-wrapper>
       </app-content-parapgraph>
-
     </div>
   `,
   styleUrls: ['./facilities.component.less']
@@ -28,16 +29,9 @@ export class FacilitiesComponent implements IContentTemplate, OnInit {
 
   public contentParagraph: string = 'Our facilities feature: ';
 
-  public features: string[] = [
-    'Fully enclosed and sectioned areas for different age categories',
-    'Comfortable sleeping arrangements for nap times',
-    'Lots of resources and books for all ages',
-    'An on-site kitchen where home-cooked meals are made',
-    'Child bathrooms with height-appropriate toilets and sinks',
-    'Potty training facilities and equipment',
-    'Large area for parking prams and buggies on the premises',
-    'Alarmed doors and secured entrances',
-  ];
+  public _features = features;
+
+  public _album = FacilitiesAlbum();
 
   ngOnInit() {
   }
