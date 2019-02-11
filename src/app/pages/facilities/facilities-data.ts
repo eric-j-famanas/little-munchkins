@@ -1,4 +1,15 @@
+import { IContentImage } from '../../general/content/content-image/content-image';
 import { ILightboxEntry } from '../../general/lightbox-wrapper/lightbox-entry';
+
+export const facilitiesContentImage: IContentImage = {
+  default: 'assets/banners/facilities/facilities_main.jpg',
+  GT_LG: 'assets/banners/facilities/facilities_GT_LG.jpg',
+  GT_MD: 'assets/banners/facilities/facilities_GT_MD.jpg',
+  GT_SM: 'assets/banners/facilities/facilities_GT_SM.jpg',
+  GT_XS: 'assets/banners/facilities/facilities_GT_XS.jpg',
+  XS: 'assets/banners/facilities/facilities_XS.jpg',
+  alt: 'Little Munchkins Facilities'
+};
 
 export const FacilitiesAlbum = (): ILightboxEntry[] => {
   const album: ILightboxEntry[] = [];

@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { IContentImage } from '../../general/content/content-image/content-image';
 import { IContentTemplate } from '../../general/content/content-template/content-template';
-import { FacilitiesAlbum, features } from './facilities-data';
+import { FacilitiesAlbum, facilitiesContentImage, features } from './facilities-data';
 
 @Component({
   selector: 'app-facilities',
   template: `
     <div class="content-wrapper">
       <app-content-template [headerTitle]="headerTitle" [subHeaderTitle]="subHeaderTitle">
-        Facilities Picture
+        <app-content-image [contentImage]="_facilitiesContentImage"></app-content-image>
       </app-content-template>
       <app-content-parapgraph [contentParagraph]="contentParagraph">
         <ul>
@@ -32,6 +33,8 @@ export class FacilitiesComponent implements IContentTemplate, OnInit {
   public _features = features;
 
   public _album = FacilitiesAlbum();
+
+  public _facilitiesContentImage: IContentImage = facilitiesContentImage;
 
   ngOnInit() {
   }
