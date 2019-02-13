@@ -1,0 +1,19 @@
+.row {
+  margin: 10px auto;
+  width: fit-content;
+  width: -moz-fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  & app-profile-card {
+    flex: 1;
+  }
+}
+
+@media screen and (max-width: 425px){
+  .row {
+    flex-direction: column;
+  }
+}
+

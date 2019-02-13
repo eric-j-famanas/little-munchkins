@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { IContentImage } from '../../general/content/content-image/content-image';
 import { IContentTemplate } from '../../general/content/content-template/content-template';
-import { aboutContentImage } from './about-data';
+import { IProfileCard } from '../../general/profile-card/profile-card';
+import { aboutContentImage, profileRows } from './about-data';
 
 @Component({
   selector: 'app-about',
@@ -12,11 +13,13 @@ import { aboutContentImage } from './about-data';
       </app-content-template>
       <app-content-parapgraph [contentParagraph]="firstParagraph"></app-content-parapgraph>
       <app-content-parapgraph [contentParagraph]="secondParagraph"></app-content-parapgraph>
-      <app-profile-card
-        [profileSrc]="'assets/staff/test.jpg'"
-        [position]="'test position'"
-        [subtitle]="'testSubtitle'">
-      </app-profile-card>
+      <app-content-parapgraph>
+        <div *ngFor="let row of _profileRows">
+          <div class="row">
+            <app-profile-card *ngFor="let profileCard of row" [profileCard]="profileCard"></app-profile-card>
+          </div>
+        </div>
+      </app-content-parapgraph>
     </div>
   `,
   styleUrls: ['./about.component.less']
@@ -34,6 +37,7 @@ export class AboutComponent implements IContentTemplate, OnInit {
     'believing that every child should have the greatest start they can to help them in life.';
 
   public _aboutContentImage: IContentImage = aboutContentImage;
+  public _profileRows: IProfileCard[][] = profileRows;
 
   ngOnInit() {
   }

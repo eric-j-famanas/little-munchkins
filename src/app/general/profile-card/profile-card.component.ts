@@ -1,13 +1,14 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { IProfileCard } from './profile-card';
 
 @Component({
   selector: 'app-profile-card',
   template: `
     <mat-card class="card-wrapper">
       <mat-card-content class="center-content">
-        <img mat-card-avatar src="{{profileSrc}}"/>
-        <mat-card-title>{{position}}</mat-card-title>
-        <mat-card-subtitle>{{subtitle}}</mat-card-subtitle>
+        <img alt="{{profileCard.name}}" mat-card-avatar src="{{profileCard.src}}"/>
+        <mat-card-title>{{profileCard.name}}</mat-card-title>
+        <mat-card-subtitle>{{profileCard.subtitle}}</mat-card-subtitle>
       </mat-card-content>
     </mat-card>
   `,
@@ -15,11 +16,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ProfileCardComponent implements OnInit {
 
-  @Input() profileSrc: string;
-
-  @Input() position: string;
-
-  @Input() subtitle: string;
+  @Input() profileCard: IProfileCard;
 
   constructor() { }
 
