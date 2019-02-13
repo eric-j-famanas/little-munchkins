@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { IContentImage } from '../../general/content/content-image/content-image';
 import { IContentTemplate } from '../../general/content/content-template/content-template';
+import { aboutContentImage } from './about-data';
 
 @Component({
   selector: 'app-about',
   template: `
     <div class="content-wrapper">
       <app-content-template [headerTitle]="headerTitle" [subHeaderTitle]="subHeaderTitle">
-        Policies Picture
+        <app-content-image [contentImage]="_aboutContentImage"></app-content-image>
       </app-content-template>
       <app-content-parapgraph [contentParagraph]="firstParagraph"></app-content-parapgraph>
       <app-content-parapgraph [contentParagraph]="secondParagraph"></app-content-parapgraph>
@@ -30,6 +32,8 @@ export class AboutComponent implements IContentTemplate, OnInit {
   public firstParagraph = 'We take great pride in our setting, providing safe and secure facilities and homely atmosphere.';
   public secondParagraph = 'Our staff is here to ensure that all children’s lives are enriched as best as possible,' +
     'believing that every child should have the greatest start they can to help them in life.';
+
+  public _aboutContentImage: IContentImage = aboutContentImage;
 
   ngOnInit() {
   }

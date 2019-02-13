@@ -25,3 +25,21 @@ export const dayToDayContentImage: IContentImage = {
   XS: 'assets/banners/dayToDay/dayToDay_XS.jpg',
   alt: 'Little Munchkins dayToDay'
 };
+
+export const firstParagraph = 'At Little Munchkins we offer home cooked meals and nutritious snacks. ' +
+  'We understand that eating healthy is an important concern for every parent, and ' +
+  'we do our best to make sure those good habits continue in our setting.';
+
+export const secondParagraph = 'Little Munchkins offer breakfast, lunch and afternoon dinner; light snacks, ' +
+  'including fresh fruit and vegetables, as well as drinks, are available throughout the day. ' +
+  'The nursery cook freshly prepares all meals on site. Food might be liquidised/ blended for ' +
+  'younger children or alternatively parents can provide pre-prepared food. We also provide ' +
+  'purred fruit and vegetables for weaning babies.';
+
+
+export const features: string[] = [
+  'Daily physical activities such as Flippy Flops and Yoga',
+  'Oak Activities',
+  'Preschool sports activities',
+  'Educational activities to promote mental growth',
+];
