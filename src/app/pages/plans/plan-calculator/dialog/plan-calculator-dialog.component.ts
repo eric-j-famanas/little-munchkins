@@ -48,6 +48,11 @@ export class PlanCalculatorDialogComponent {
    * return rate
    */
 
+
+// Under 2’s full day £47 half day £31.20
+// Toddlers (2-3) full day £46 half day £30
+// Preschool full day £45 half day £28.80
+// Before and after school club £4.80
   public onInputChange(value: string) {
     this.totalEstimate = parseFloat(value) > this.default ? parseFloat(value) : this.default;
   }
