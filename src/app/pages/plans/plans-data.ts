@@ -11,7 +11,7 @@ export const plansContentImage: IContentImage = {
 };
 
 export const planNames: string[] = [
-  'Ages 2 and under:',
+  'Ages 2 and Under',
   'Ages 2 to 3',
   'Preschool',
 ];
@@ -28,34 +28,29 @@ export const planFullRates: number[] = [
   45.00,
 ];
 
-export const clubName: string = 'Before and After School Club';
-export const clubRate: number = 4.80;
-
 export interface Plan {
   name: string;
   halfRate: number;
   fullRate: number;
 }
 
-export const planOptions: Plan[] = [
+export const plans: Plan[] = [
   {
-    name: 'Ages 2 and Under',
-    halfRate: 31.20,
-    fullRate: 47.00,
+    name: planNames[0],
+    halfRate: planHalfRates[0],
+    fullRate: planFullRates[0],
   },
   {
-    name: 'Ages 2-3',
-    halfRate: 31.20,
-    fullRate: 47.00,
+    name: planNames[1],
+    halfRate: planHalfRates[1],
+    fullRate: planFullRates[1],
   },
   {
-    name: 'Under 2',
-    halfRate: 31.20,
-    fullRate: 47.00,
-  },
-  {
-    name: 'Under 2',
-    halfRate: 31.20,
-    fullRate: 47.00,
+    name: planNames[2],
+    halfRate: planHalfRates[2],
+    fullRate: planHalfRates[2],
   },
 ];
+
+export const clubName: string = 'Before and After School Club';
+export const clubRate: number = 4.80;

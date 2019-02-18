@@ -1,23 +1,46 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { clubRate, planNames, plans } from '../../plans-data';
+
+type PlanTypes = 'Ages 2 and Under' | 'Ages 2 to 3' | 'Preschool' | 'School Club';
 
 @Component({
   selector: 'app-plan-calculator-dialog',
   template: `
     <h2 mat-dialog-title>Childcare Cost Calculator</h2>
     <mat-dialog-content class="mat-typography">
-      <h3>Estimate your monthly costs!</h3>
+      <h3>Estimate your weekly costs!</h3>
       <form>
-        <select #mySelectInput [value]="" (change)="onSelectChange(mySelectInput.value)">
-          <option value="">-----</option>
-          <option value="myOptionOne">myOptionOne</option>
-          <option value="myOptionOne">myOptionTwo</option>
-        </select>
-        <input #myNumberInput type="number" (keyup)="onInputChange(myNumberInput.value)"/>
-        <input #one type="radio" name="gender" value="male" (change)="onRadioChange(one.value)"> Male<br>
-        <input #two type="radio" name="gender" value="female" (change)="onRadioChange(two.value)"> Female<br>
-        <input #three type="radio" name="gender" value="other" (change)="onRadioChange(three.value)"> Other
+        <div>
+          <label>
+            What kind of care are you looking for?
+          </label>
+          <br/>
+          <select #planSelection [value]="_planNames[0]" (change)="onSelectChange(planSelection.value)">
+            <option *ngFor="let planName of _planNames" [value]="planName">For {{planName}}</option>
+            <option [value]="schoolClubString">{{schoolClubString}}</option>
+          </select>
+        </div>
+        <div>
+          <label>How many days a week?</label>
+          <br/>
+          <input #days type="number" min="1" max="5" value="1" (change)="onDaysChange(days.value)"/>
+        </div>
+        <div *ngIf="!schoolClub">
+          <label>
+            What kind of days would you like?
+          </label>
+          <br/>
+          <input #halfRate checked type="radio" name="rate" value="halfRate" (change)="onRadioChange(halfRate.value)">Half Day<br>
+          <input #fullRate type="radio" name="rate" value="fullRate" (change)="onRadioChange(fullRate.value)">Full Day<br>
+        </div>
+        <div *ngIf="schoolClub">
+          <label>How many hours per day?</label>
+          <br/>
+          <input #hours type="number" min="1" max="6" value="1" (change)="onHoursChange(hours.value)"/>
+        </div>
       </form>
-      <p>{{totalEstimate}}</p>
+      <label>Your weekly estimate: </label>
+      <p>{{totalEstimate}} per week</p>
     </mat-dialog-content>
     <mat-dialog-actions align="end">
       <button mat-button mat-dialog-close>Close</button>
@@ -25,50 +48,75 @@ import { Component } from '@angular/core';
   `,
   styleUrls: ['./plan-calculator-dialog.component.less']
 })
-export class PlanCalculatorDialogComponent {
+export class PlanCalculatorDialogComponent implements OnInit {
+  // TODO: small delay on change
+  public _planNames = planNames;
+  public schoolClubString: string = 'School Club';
 
-  private readonly default: number = 0;
-  public totalEstimate: number = this.default;
+  private _totalEstimate: number = 0;
 
-  /**
-   * Age of child
-   *
-   * What plan (part time or full time for under x age)
-   * Or breakfast club / afterschool club / before and after
-   *
-   * childcare vouchers
-   * how much a month
-   *
-   * 15 or 30 free hours (conditional)
-   * over 3 under school age
-   *
-   * calc
-   * hours = plan - free hours
-   * rate = price * plan
-   * return rate
-   */
-
-
-// Under 2’s full day £47 half day £31.20
-// Toddlers (2-3) full day £46 half day £30
-// Preschool full day £45 half day £28.80
-// Before and after school club £4.80
-  public onInputChange(value: string) {
-    this.totalEstimate = parseFloat(value) > this.default ? parseFloat(value) : this.default;
+  public get totalEstimate(): string {
+    return this._totalEstimate.toFixed(2);
   }
 
-  public onSelectChange(value) {
-    console.log(value);
+  private _selectedPlan: PlanTypes = planNames[0] as PlanTypes;
+
+  public get selectedPlan(): string {
+    return this._selectedPlan;
   }
 
-  public onRadioChange(value) {
-    console.log(value);
-    // todo: check for 15 free hours child has to be over 3
-    // todo
+  public get schoolClub(): boolean {
+    return this.selectedPlan === this.schoolClubString;
+  }
+
+  private _selectedRate: string = 'halfRate';
+
+  public get selectedRate(): string {
+    return this._selectedRate;
+  }
+
+  private _inputDays: number = 1;
+
+  public get inputDays(): number {
+    return this._inputDays;
+  }
+
+  private _inputHours: number = 1;
+
+  public get inputHours(): number {
+    return this._inputHours;
+  }
+
+  public ngOnInit(): void {
+    this.calcTotal();
+  }
+
+  public onSelectChange(value: PlanTypes) {
+    this._selectedPlan = value;
+    this.calcTotal();
+  }
+
+  public onRadioChange(value: string) {
+    this._selectedRate = value;
+    this.calcTotal();
+  }
+
+  public onDaysChange(value: number) {
+    this._inputDays = value;
+    this.calcTotal();
+  }
+
+  public onHoursChange(value: number) {
+    this._inputHours = value;
+    this.calcTotal();
   }
 
   private calcTotal(): void {
-    // todo
+    if (this.schoolClub) {
+      this._totalEstimate = clubRate * this.inputDays * this.inputHours;
+    } else {
+      this._totalEstimate = plans[planNames.indexOf(this.selectedPlan)][this.selectedRate] * this.inputDays;
+    }
   }
 }
 
