@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { IContentImage } from '../general/content/content-image/content-image';
 import { AboutComponent } from '../pages/about/about.component';
 import { DayToDayComponent } from '../pages/day-to-day/day-to-day.component';
 import { FacilitiesComponent } from '../pages/facilities/facilities.component';
@@ -72,3 +73,16 @@ export const pageRoutes: Routes = [
   { path: PathNames.dayToDay, component: DayToDayComponent },
   { path: PathNames.policies, component: PoliciesComponent },
 ];
+
+const full = 'assets/logo/logo_header_full.png';
+const mobile = 'assets/logo/logo_header_mobile.png';
+
+export const logoImage: IContentImage = {
+  default: mobile,
+  GT_LG: full,
+  GT_MD: full,
+  GT_SM: mobile,
+  GT_XS: mobile,
+  XS: mobile,
+  alt: 'Little Munchkins'
+};

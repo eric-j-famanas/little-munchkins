@@ -11,9 +11,13 @@ export const aboutContentImage: IContentImage = {
   alt: 'Little Munchkins About'
 };
 
+const staffSrc = (staffName: string) => {
+  return `assets/staff/${staffName}.jpg`;
+};
+
 export const profileRowOne: IProfileCard[] = [
   {
-    src: '',
+    src: staffSrc('anna_clark'),
     name: 'Anna Clark',
     subtitle: 'Nursery Director'
   }
@@ -21,17 +25,17 @@ export const profileRowOne: IProfileCard[] = [
 
 export const profileRowTwo: IProfileCard[] = [
   {
-    src: '',
+    src: staffSrc('jodie_thrower'),
     name: 'Jodie Thrower',
     subtitle: 'Nursery Manager'
   },
   {
-    src: '',
+    src: staffSrc('sara_wilkinson'),
     name: 'Sara Wilkinson',
     subtitle: 'Deputy Manager'
   },
   {
-    src: '',
+    src: staffSrc('monika_pilarczyk'),
     name: 'Monika Pilarczyk',
     subtitle: 'Nursery Chef'
   }
@@ -39,17 +43,17 @@ export const profileRowTwo: IProfileCard[] = [
 
 export const profileRowThree: IProfileCard[] = [
   {
-    src: '',
+    src: staffSrc('april_lyness'),
     name: 'April Lyness',
     subtitle: 'Level 3 Practitioner'
   },
   {
-    src: '',
+    src: staffSrc('jessica_lyness'),
     name: 'Jessica Lyness',
     subtitle: 'Level 3 Practitioner'
   },
   {
-    src: '',
+    src: staffSrc('lisa_avery'),
     name: 'Lisa Avery',
     subtitle: 'Level 3 Practitioner'
   }
@@ -57,17 +61,17 @@ export const profileRowThree: IProfileCard[] = [
 
 export const profileRowFour: IProfileCard[] = [
   {
-    src: '',
+    src: staffSrc('ashleigh_north'),
     name: 'Ashleigh North',
     subtitle: 'Level 3 Practitioner'
   },
   {
-    src: '',
+    src: staffSrc('default'),
     name: 'Shannon Rodgers',
     subtitle: 'Level 3 Apprentice'
   },
   {
-    src: '',
+    src: staffSrc('default'),
     name: 'Chloe Rodgers',
     subtitle: 'Level 2 Practitioner'
   }

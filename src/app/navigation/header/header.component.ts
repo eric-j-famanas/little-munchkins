@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Route } from '@angular/router';
+import { IContentImage } from '../../general/content/content-image/content-image';
 import { PathData } from '../../routing/path-name-data';
-import { formatName } from '../../utilities/string-formatters';
 
 @Component({
   selector: 'app-header',
@@ -13,12 +13,22 @@ import { formatName } from '../../utilities/string-formatters';
         </button>
       </div>
       <div>
-        <a routerLink="/home">Logo</a>
+        <a routerLink="/home">
+          <img class="logo"
+               alt="{{logoImage.alt}}"
+               src="{{logoImage.default}}"
+               src.gt-lg="{{logoImage.GT_LG}}"
+               src.gt-md="{{logoImage.GT_MD}}"
+               src.gt-sm="{{logoImage.GT_SM}}"
+               src.gt-xs="{{logoImage.GT_XS}}"
+               src.xs="{{logoImage.XS}}"
+          />
+        </a>
       </div>
       <div fxFlex fxLayout fxLayoutAlign="end" fxHide fxShow.gt-xs>
         <ul fxLayout fxLayoutGap="15px" class="navigation-items">
           <li *ngFor="let route of pathRoutes">
-            <a routerLink="/{{route.path}}">{{pathData.get(route.path)!.viewName}}</a>
+            <a routerLink="/{{route.path}}">{{getViewName(route.path)}}</a>
           </li>
         </ul>
       </div>
@@ -37,14 +47,21 @@ export class HeaderComponent implements OnInit {
 
   @Input() pathData: Map<string, PathData>;
 
+  @Input() logoImage: IContentImage;
+
   ngOnInit() {
+  }
+
+  public getViewName(path: string): string {
+    const route = this.pathData.get(path);
+    if (route !== undefined) {
+      return route.viewName;
+    } else {
+      return '';
+    }
   }
 
   public onToggleSidenav(): void {
     this.sidenavToggle.emit();
-  }
-
-  public formatName(pathName: string): string {
-    return formatName(pathName);
   }
 }

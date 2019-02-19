@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Route } from '@angular/router';
-import { pageRoutes, PathData, pathNameDataSet } from './routing/path-name-data';
+import { IContentImage } from './general/content/content-image/content-image';
+import { logoImage, pageRoutes, PathData, pathNameDataSet } from './routing/path-name-data';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,7 @@ import { pageRoutes, PathData, pathNameDataSet } from './routing/path-name-data'
         <mat-sidenav-content>
           <div class="page-wrap">
             <app-header
+              [logoImage]="_logoImage"
               [pathRoutes]="_pageRoutes"
               [pathData]="_pathData"
               (sidenavToggle)="sidenav.toggle()">
@@ -34,4 +36,5 @@ import { pageRoutes, PathData, pathNameDataSet } from './routing/path-name-data'
 export class AppComponent {
   public _pageRoutes: Array<Route> = pageRoutes;
   public _pathData: Map<string, PathData> = pathNameDataSet;
+  public _logoImage: IContentImage = logoImage;
 }
