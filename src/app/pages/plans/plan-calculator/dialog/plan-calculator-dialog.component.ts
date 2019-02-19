@@ -10,7 +10,7 @@ type PlanTypes = 'Ages 2 and Under' | 'Ages 2 to 3' | 'Preschool' | 'School Club
     <mat-dialog-content class="mat-typography">
       <h3>Estimate your weekly costs!</h3>
       <form>
-        <div>
+        <div class="option">
           <label>
             What kind of care are you looking for?
           </label>
@@ -20,12 +20,12 @@ type PlanTypes = 'Ages 2 and Under' | 'Ages 2 to 3' | 'Preschool' | 'School Club
             <option [value]="schoolClubString">{{schoolClubString}}</option>
           </select>
         </div>
-        <div>
+        <div class="option">
           <label>How many days a week?</label>
           <br/>
           <input #days type="number" min="1" max="5" value="1" (change)="onDaysChange(days.value)"/>
         </div>
-        <div *ngIf="!schoolClub">
+        <div class="option" *ngIf="!schoolClub">
           <label>
             What kind of days would you like?
           </label>
@@ -33,14 +33,17 @@ type PlanTypes = 'Ages 2 and Under' | 'Ages 2 to 3' | 'Preschool' | 'School Club
           <input #halfRate checked type="radio" name="rate" value="halfRate" (change)="onRadioChange(halfRate.value)">Half Day<br>
           <input #fullRate type="radio" name="rate" value="fullRate" (change)="onRadioChange(fullRate.value)">Full Day<br>
         </div>
-        <div *ngIf="schoolClub">
+        <div class="option" *ngIf="schoolClub">
           <label>How many hours per day?</label>
           <br/>
           <input #hours type="number" min="1" max="6" value="1" (change)="onHoursChange(hours.value)"/>
         </div>
       </form>
-      <label>Your weekly estimate: </label>
-      <p>{{totalEstimate}} per week</p>
+      <div class="total">
+        <label>Your weekly estimate: </label>
+        <p>{{totalEstimate}} per week**</p>
+        <h6>** estimate purposes only. Please discuss rates with the site manager.</h6>
+      </div>
     </mat-dialog-content>
     <mat-dialog-actions align="end">
       <button mat-button mat-dialog-close>Close</button>
