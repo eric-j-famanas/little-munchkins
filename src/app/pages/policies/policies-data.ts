@@ -29,3 +29,10 @@ export const policiesData: IPoliciesData[] = [
     pdfLink: 'assets/policies/equalities_policy_2018.pdf',
   }
 ];
+
+export const policiesParagraphOne: string = 'We at Little Munchkins follow a strict set of rules to ensure your ' +
+  'children are growing up in both a safe and productive environment. We believe in fairness, equal treatment, and respect for all.' +
+  'We are also obligated to place the safety of children at the forefront and will do our best to carry it out.';
+
+export const policiesParagraphTwo: string = 'If you have any questions regarding our policies' +
+  'or have any concerns, please bring them to the attention of the site manager.';
