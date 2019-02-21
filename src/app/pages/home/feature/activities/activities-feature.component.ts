@@ -1,23 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { IContentImage } from '../../../../general/content/content-image/content-image';
 import { PathNames } from '../../../../routing/path-name-data';
+import { activitiesContentImage } from './activities-feature-data';
 
 @Component({
   selector: 'app-activities-feature',
   template: `
-    <app-feature [routerLink]="pathName">
-      <div style="color: black">Activites Feature Works</div>
+    <app-feature [routerLink]="pathName" [contentImage]="_contentImage">
     </app-feature>
   `,
   styleUrls: ['./activities-feature.component.less']
 })
-export class ActivitiesFeatureComponent implements OnInit {
-
-  constructor() {
-  }
-
+export class ActivitiesFeatureComponent {
   public pathName = PathNames.dayToDay;
-
-  ngOnInit() {
-  }
-
+  public _contentImage: IContentImage = activitiesContentImage;
 }

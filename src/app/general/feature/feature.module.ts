@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatButtonModule } from '@angular/material';
+import { MaterialModule } from '../../material/material.module';
 import { AppRoutingModule } from '../../routing/app-routing.module';
 import { FeatureComponent } from './feature.component';
 
@@ -10,7 +10,7 @@ import { FeatureComponent } from './feature.component';
   ],
   imports: [
     CommonModule,
-    MatButtonModule,
+    MaterialModule,
     AppRoutingModule,
   ],
   exports: [
