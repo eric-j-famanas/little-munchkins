@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-pdf-wrapper',
@@ -14,16 +14,10 @@ import { Component, Input, OnInit } from '@angular/core';
   `,
   styleUrls: ['./pdf-wrapper.component.less']
 })
-export class PdfWrapperComponent implements OnInit {
-
-  constructor() {
-  }
+export class PdfWrapperComponent {
 
   @Input() pdfTitle: string;
   @Input() pdfLink: string;
-
-  ngOnInit() {
-  }
 
   public openPdf(): void {
     window.open(this.pdfLink, '_blank');

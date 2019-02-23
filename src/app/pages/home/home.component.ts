@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   template: `
     <section fxLayout="column wrap">
-      <mat-tab-group (selectedTabChange)="executeSelectedChange($event)">
+      <mat-tab-group>
         <mat-tab label="Competitive Rates">
           <app-rates-feature></app-rates-feature>
         </mat-tab>
@@ -19,16 +19,5 @@ import { Component, OnInit } from '@angular/core';
   `,
   styleUrls: ['./home.component.less']
 })
-export class HomeComponent implements OnInit {
-
-  constructor() {
-  }
-
-  ngOnInit() {
-  }
-
-  public executeSelectedChange = (event) => {
-    console.log(event);
-  }
-
+export class HomeComponent {
 }

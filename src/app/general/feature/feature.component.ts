@@ -17,6 +17,10 @@ import { IContentImage } from '../content/content-image/content-image';
         />
       </div>
     </div>
+    <div class="titleWrapper">
+      <h1>{{contentTitle}}</h1>
+      <h2>{{contentSubtitle}}</h2>
+    </div>
     <button mat-flat-button routerLink="/{{routerLink}}"> Learn More</button>
   `,
   styleUrls: ['./feature.component.less']
@@ -27,6 +31,8 @@ export class FeatureComponent implements OnInit {
   }
 
   @Input() routerLink: string;
+  @Input() contentTitle: string;
+  @Input() contentSubtitle: string;
   @Input() contentImage: IContentImage;
 
   ngOnInit() {

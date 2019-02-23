@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { IContentImage } from '../../../../general/content/content-image/content-image';
 import { PathNames } from '../../../../routing/path-name-data';
 import { ratesContentImage } from './rates-feature-data';
@@ -6,19 +6,18 @@ import { ratesContentImage } from './rates-feature-data';
 @Component({
   selector: 'app-rates-feature',
   template: `
-    <app-feature [contentImage]="_contentImage" [routerLink]="pathName"></app-feature>
+    <app-feature
+      [contentImage]="_contentImage"
+      [routerLink]="pathName"
+      [contentTitle]="_contentTitle"
+      [contentSubtitle]="_contentSubtitle"
+    ></app-feature>
   `,
   styleUrls: ['./rates-feature.component.less']
 })
-export class RatesFeatureComponent implements OnInit {
-
-  constructor() {
-  }
-
+export class RatesFeatureComponent {
   public pathName: string = PathNames.plans;
   public _contentImage: IContentImage = ratesContentImage;
-
-  ngOnInit() {
-  }
-
+  public _contentTitle = 'Great Care';
+  public _contentSubtitle = 'For Even Greater Prices';
 }

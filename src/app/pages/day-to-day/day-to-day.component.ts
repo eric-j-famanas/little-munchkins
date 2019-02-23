@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { IContentImage } from '../../general/content/content-image/content-image';
 import { IContentTemplate } from '../../general/content/content-template/content-template';
 import { ILightboxEntry } from '../../general/lightbox-wrapper/lightbox-entry';
@@ -24,10 +24,7 @@ import { DayToDayAlbum, dayToDayContentImage, features, firstParagraph, secondPa
   `,
   styleUrls: ['./day-to-day.component.less']
 })
-export class DayToDayComponent implements IContentTemplate, OnInit {
-
-  constructor() {
-  }
+export class DayToDayComponent implements IContentTemplate {
 
   public headerTitle = 'Our Daily Routine';
   public subHeaderTitle = 'What We Do, What We Eat, and How We Grow';
@@ -37,8 +34,4 @@ export class DayToDayComponent implements IContentTemplate, OnInit {
   public _features: string[] = features;
   public _firstParagraph = firstParagraph;
   public _secondParagraph = secondParagraph;
-
-  ngOnInit() {
-  }
-
 }

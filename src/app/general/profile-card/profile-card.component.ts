@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { IProfileCard } from './profile-card';
 
 @Component({
@@ -14,13 +14,6 @@ import { IProfileCard } from './profile-card';
   `,
   styleUrls: ['./profile-card.component.less']
 })
-export class ProfileCardComponent implements OnInit {
-
+export class ProfileCardComponent {
   @Input() profileCard: IProfileCard;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
 }

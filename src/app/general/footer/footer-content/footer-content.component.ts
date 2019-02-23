@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 // tslint:disable:max-line-length
 @Component({
@@ -23,11 +23,5 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer-content.component.less']
 })
 // tslint:enable:max-line-length
-export class FooterContentComponent implements OnInit {
-
-  constructor() {
-  }
-
-  ngOnInit() {
-  }
+export class FooterContentComponent {
 }

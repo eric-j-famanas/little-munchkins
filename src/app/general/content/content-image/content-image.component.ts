@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { IContentImage } from './content-image';
 
 @Component({
@@ -19,11 +19,6 @@ import { IContentImage } from './content-image';
   `,
   styleUrls: ['./content-image.component.less']
 })
-export class ContentImageComponent implements OnInit {
-
+export class ContentImageComponent {
   @Input() contentImage: IContentImage;
-
-  ngOnInit() {
-  }
-
 }

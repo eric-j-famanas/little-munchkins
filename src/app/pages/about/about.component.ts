@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { IContentImage } from '../../general/content/content-image/content-image';
 import { IContentTemplate } from '../../general/content/content-template/content-template';
 import { IProfileCard } from '../../general/profile-card/profile-card';
@@ -24,10 +24,7 @@ import { aboutContentImage, profileRows } from './about-data';
   `,
   styleUrls: ['./about.component.less']
 })
-export class AboutComponent implements IContentTemplate, OnInit {
-
-  constructor() {
-  }
+export class AboutComponent implements IContentTemplate {
 
   public headerTitle: string = 'Our Business, Our People';
   public subHeaderTitle: string = 'We Treat Your Little Munchkins as Our Own';
@@ -38,8 +35,5 @@ export class AboutComponent implements IContentTemplate, OnInit {
 
   public _aboutContentImage: IContentImage = aboutContentImage;
   public _profileRows: IProfileCard[][] = profileRows;
-
-  ngOnInit() {
-  }
 
 }

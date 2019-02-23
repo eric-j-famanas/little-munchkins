@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Lightbox } from 'ngx-lightbox';
 import { ILightboxEntry } from './lightbox-entry';
 
@@ -15,7 +15,7 @@ import { ILightboxEntry } from './lightbox-entry';
   `,
   styleUrls: ['./lightbox-wrapper.component.less']
 })
-export class LightboxWrapperComponent implements OnInit {
+export class LightboxWrapperComponent {
 
   constructor(
     private readonly lightbox: Lightbox,
@@ -23,9 +23,6 @@ export class LightboxWrapperComponent implements OnInit {
   }
 
   @Input() public album: ILightboxEntry[];
-
-  ngOnInit() {
-  }
 
   public open(index: number): void {
     this.lightbox.open(this.album, index);

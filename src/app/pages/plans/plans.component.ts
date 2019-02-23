@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { IContentImage } from '../../general/content/content-image/content-image';
 import { IContentTemplate } from '../../general/content/content-template/content-template';
 import { clubName, clubRate, planFullRates, planHalfRates, planNames, plansContentImage } from './plans-data';
@@ -15,16 +15,16 @@ import { clubName, clubRate, planFullRates, planHalfRates, planNames, plansConte
       <app-content-parapgraph>
         <table class="rates-table">
           <thead>
-            <th>Age Category</th>
-            <th>Half Day</th>
-            <th>Full Day</th>
+          <th>Age Category</th>
+          <th>Half Day</th>
+          <th>Full Day</th>
           </thead>
           <tbody>
-            <tr *ngFor="let name of _planNames">
-              <td>{{name}}</td>
-              <td>£{{_planHalfRates[_planNames.indexOf(name)].toFixed(2)}}</td>
-              <td>£{{_planFullRates[_planNames.indexOf(name)].toFixed(2)}}</td>
-            </tr>
+          <tr *ngFor="let name of _planNames">
+            <td>{{name}}</td>
+            <td>£{{_planHalfRates[_planNames.indexOf(name)].toFixed(2)}}</td>
+            <td>£{{_planFullRates[_planNames.indexOf(name)].toFixed(2)}}</td>
+          </tr>
           </tbody>
         </table>
         <p>{{_clubName}} : {{_clubRate.toFixed(2)}} pH</p>
@@ -39,13 +39,9 @@ import { clubName, clubRate, planFullRates, planHalfRates, planNames, plansConte
   `,
   styleUrls: ['./plans.component.less']
 })
-export class PlansComponent implements IContentTemplate, OnInit {
-
-  constructor() {
-  }
+export class PlansComponent implements IContentTemplate {
 
   public headerTitle = 'Our Plans and Pricing';
-
   public subHeaderTitle = 'Fantastic Care at Competitive Rates';
 
   public contentParagraphOne = 'We offer nursery and preschool care for children ages 6 months to 5 years old' +
@@ -61,8 +57,4 @@ export class PlansComponent implements IContentTemplate, OnInit {
   public _planFullRates: number[] = planFullRates;
   public _clubName: string = clubName;
   public _clubRate: number = clubRate;
-
-  ngOnInit() {
-  }
-
 }

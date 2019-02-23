@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { IContentImage } from '../../general/content/content-image/content-image';
 import { IContentTemplate } from '../../general/content/content-template/content-template';
 import { IPoliciesData, policiesContentImage, policiesData, policiesParagraphOne, policiesParagraphTwo } from './policies-data';
@@ -20,11 +20,7 @@ import { IPoliciesData, policiesContentImage, policiesData, policiesParagraphOne
   `,
   styleUrls: ['./policies.component.less']
 })
-export class PoliciesComponent implements IContentTemplate, OnInit {
-
-  constructor() {
-  }
-
+export class PoliciesComponent implements IContentTemplate {
   public headerTitle: string = 'Our Policies and Procedures';
   public subHeaderTitle: string = 'Every House Has Its Rules';
 
@@ -32,8 +28,4 @@ export class PoliciesComponent implements IContentTemplate, OnInit {
   public _policiesContentImage: IContentImage = policiesContentImage;
   public _contentParagraphOne: string = policiesParagraphOne;
   public _contentParagraphTwo: string = policiesParagraphTwo;
-
-  ngOnInit() {
-  }
-
 }

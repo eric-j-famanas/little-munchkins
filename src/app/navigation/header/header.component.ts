@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Route } from '@angular/router';
 import { IContentImage } from '../../general/content/content-image/content-image';
 import { PathData } from '../../routing/path-name-data';
@@ -36,21 +36,12 @@ import { PathData } from '../../routing/path-name-data';
   `,
   styleUrls: ['./header.component.less']
 })
-export class HeaderComponent implements OnInit {
-
-  constructor() {
-  }
-
+export class HeaderComponent {
   @Output() sidenavToggle: EventEmitter<void> = new EventEmitter<void>();
 
   @Input() pathRoutes: Array<Route>;
-
   @Input() pathData: Map<string, PathData>;
-
   @Input() logoImage: IContentImage;
-
-  ngOnInit() {
-  }
 
   public getViewName(path: string): string {
     const route = this.pathData.get(path);

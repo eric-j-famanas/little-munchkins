@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-content-template',
@@ -14,16 +14,7 @@ import { Component, Input, OnInit } from '@angular/core';
   `,
   styleUrls: ['./content-template.component.less']
 })
-export class ContentTemplateComponent implements OnInit {
-
-  constructor() {
-  }
-
+export class ContentTemplateComponent {
   @Input() headerTitle: string;
-
   @Input() subHeaderTitle: string;
-
-  ngOnInit() {
-  }
-
 }
