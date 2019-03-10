@@ -99,8 +99,6 @@ THE SOFTWARE.
 
 @angular/material/sidenav
 
-@angular/material/tabs
-
 @angular/material/toolbar
 
 @angular/platform-browser
