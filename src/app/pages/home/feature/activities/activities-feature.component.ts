@@ -17,7 +17,7 @@ import { activitiesContentImage } from './activities-feature-data';
   styleUrls: ['./activities-feature.component.less']
 })
 export class ActivitiesFeatureComponent {
-  public pathName = PathNames.dayToDay;
+  public pathName = PathNames.meals;
   public _contentImage: IContentImage = activitiesContentImage;
   public _contentTitle = 'Great Acivities';
   public _contentSubtitle = 'Both Fun and Educational';

@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { IContentImage } from '../general/content/content-image/content-image';
 import { TeamComponent } from '../pages/team/team.component';
-import { DayToDayComponent } from '../pages/day-to-day/day-to-day.component';
+import { MealsComponent } from '../pages/meals/meals.component';
 import { AboutComponent } from '../pages/about/about.component';
 import { FeesComponent } from '../pages/fees/fees.component';
 import { PoliciesComponent } from '../pages/policies/policies.component';
@@ -10,7 +10,7 @@ import { formatName } from '../utilities/string-formatters';
 export enum PathNames {
   home = 'home',
   team = 'team',
-  dayToDay = 'day-to-day',
+  meals = 'meals',
   fees = 'fees',
   about = 'about',
   policies = 'policies'
@@ -37,9 +37,9 @@ export const pathNameDataSet: Map<string, PathData> = new Map([
     }
   ],
   [
-    PathNames.dayToDay,
+    PathNames.meals,
     {
-      viewName: formatName(PathNames.dayToDay),
+      viewName: formatName(PathNames.meals),
       icon: 'play_for_work',
     }
   ],
@@ -70,7 +70,7 @@ export const pageRoutes: Routes = [
   { path: PathNames.team, component: TeamComponent },
   { path: PathNames.fees, component: FeesComponent },
   { path: PathNames.about, component: AboutComponent },
-  { path: PathNames.dayToDay, component: DayToDayComponent },
+  { path: PathNames.meals, component: MealsComponent },
   { path: PathNames.policies, component: PoliciesComponent },
 ];
 

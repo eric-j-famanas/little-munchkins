@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ContentModule } from '../../general/content/content.module';
 import { LightboxWrapperModule } from '../../general/lightbox-wrapper/lightbox-wrapper.module';
-import { DayToDayComponent } from './day-to-day.component';
+import { MealsComponent } from './meals.component';
 
 @NgModule({
   declarations: [
-    DayToDayComponent
+    MealsComponent
   ],
   imports: [
     CommonModule,
@@ -14,7 +14,7 @@ import { DayToDayComponent } from './day-to-day.component';
     LightboxWrapperModule,
   ],
   exports: [
-    DayToDayComponent
+    MealsComponent
   ]
 })
-export class DayToDayModule { }
+export class MealsModule { }
