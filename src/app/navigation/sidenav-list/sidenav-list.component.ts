@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Route } from '@angular/router';
 import { PathData } from '../../routing/path-name-data';
 
@@ -16,21 +16,15 @@ import { PathData } from '../../routing/path-name-data';
   `,
   styleUrls: ['./sidenav-list.component.less']
 })
-export class SidenavListComponent implements OnInit {
-
-  constructor() {
-  }
-
+export class SidenavListComponent {
   @Output() sidenavClose: EventEmitter<void> = new EventEmitter<void>();
+  @Output() navigateHome: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   @Input() pathRoutes: Array<Route>;
-
   @Input() pathData: Map<string, PathData>;
-
-  ngOnInit() {
-  }
 
   public onSidenavClose() {
     this.sidenavClose.emit();
+    this.navigateHome.emit(false);
   }
 }

@@ -12,7 +12,9 @@ import { logoImage, pageRoutes, PathData, pathNameDataSet } from './routing/path
           <app-sidenav-list
             [pathRoutes]="_pageRoutes"
             [pathData]="_pathData"
-            (sidenavClose)="sidenav.close()"></app-sidenav-list>
+            (sidenavClose)="sidenav.close()"
+            (navigateHome)="setMapState($event)"
+          ></app-sidenav-list>
         </mat-sidenav>
         <mat-sidenav-content>
           <div class="page-wrap">
@@ -20,12 +22,14 @@ import { logoImage, pageRoutes, PathData, pathNameDataSet } from './routing/path
               [logoImage]="_logoImage"
               [pathRoutes]="_pageRoutes"
               [pathData]="_pathData"
-              (sidenavToggle)="sidenav.toggle()">
+              (sidenavToggle)="sidenav.toggle()"
+              (navigatingHome)="setMapState($event)"
+            >
             </app-header>
             <main class="content">
               <router-outlet></router-outlet>
             </main>
-            <app-footer></app-footer>
+            <app-footer [showMap]="showMapState"></app-footer>
           </div>
         </mat-sidenav-content>
       </mat-sidenav-container>
@@ -37,4 +41,14 @@ export class AppComponent {
   public _pageRoutes: Array<Route> = pageRoutes;
   public _pathData: Map<string, PathData> = pathNameDataSet;
   public _logoImage: IContentImage = logoImage;
+
+  private _showMapState: boolean = true;
+
+  public get showMapState(): boolean {
+    return this._showMapState;
+  }
+
+  public setMapState(value: boolean) {
+    this._showMapState = value;
+  }
 }
