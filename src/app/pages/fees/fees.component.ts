@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IContentImage } from '../../general/content/content-image/content-image';
 import { IContentTemplate } from '../../general/content/content-template/content-template';
-import { clubName, clubRate, planFullRates, planHalfRates, planNames, plansContentImage } from './plans-data';
+import { clubName, clubRate, planFullRates, planHalfRates, planNames, plansContentImage } from './fees-data';
 
 @Component({
   selector: 'app-plans',
@@ -37,16 +37,15 @@ import { clubName, clubRate, planFullRates, planHalfRates, planNames, plansConte
       </div>
     </div>
   `,
-  styleUrls: ['./plans.component.less']
+  styleUrls: ['./fees.component.less']
 })
-export class PlansComponent implements IContentTemplate {
+export class FeesComponent implements IContentTemplate {
 
   public headerTitle = 'Our Plans and Pricing';
   public subHeaderTitle = 'Fantastic Care at Competitive Rates';
 
   public contentParagraphOne = 'We offer nursery and preschool care for children ages 6 months to 5 years old' +
-    'and before / after school club for children age up to 12 years. We drop off and collect children from local primary schools' +
-    ' (St. John’s Primary and Huntingdon Primary School).';
+    'and before / after school club for children age up to 12 years. We drop off and collect children from local primary schools';
 
   public contentParagraphTwo = 'Want to learn more? Give us a call or use our calculator to get an estimate **';
 

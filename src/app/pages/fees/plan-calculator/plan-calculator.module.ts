@@ -2,16 +2,16 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from '../../../material/material.module';
-import { PlanCalculatorComponent } from './component/plan-calculator.component';
-import { PlanCalculatorDialogComponent } from './dialog/plan-calculator-dialog.component';
+import { FeesCalculatorComponent } from './component/fees-calculator.component';
+import { FeesCalculatorDialogComponent } from './dialog/fees-calculator-dialog.component';
 
 @NgModule({
   declarations: [
-    PlanCalculatorComponent,
-    PlanCalculatorDialogComponent
+    FeesCalculatorComponent,
+    FeesCalculatorDialogComponent
   ],
   entryComponents: [
-    PlanCalculatorDialogComponent,
+    FeesCalculatorDialogComponent,
   ],
   imports: [
     CommonModule,
@@ -19,7 +19,7 @@ import { PlanCalculatorDialogComponent } from './dialog/plan-calculator-dialog.c
     MaterialModule,
   ],
   exports: [
-    PlanCalculatorComponent,
+    FeesCalculatorComponent,
   ]
 })
 export class PlanCalculatorModule {

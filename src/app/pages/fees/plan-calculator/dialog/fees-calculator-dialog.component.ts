@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { clubRate, planNames, plans } from '../../plans-data';
+import { clubRate, planNames, plans } from '../../fees-data';
 
 type PlanTypes = 'Ages 2 and Under' | 'Ages 2 to 3' | 'Preschool' | 'School Club';
 
@@ -49,9 +49,9 @@ type PlanTypes = 'Ages 2 and Under' | 'Ages 2 to 3' | 'Preschool' | 'School Club
       <button mat-button mat-dialog-close>Close</button>
     </mat-dialog-actions>
   `,
-  styleUrls: ['./plan-calculator-dialog.component.less']
+  styleUrls: ['./fees-calculator-dialog.component.less']
 })
-export class PlanCalculatorDialogComponent implements OnInit {
+export class FeesCalculatorDialogComponent implements OnInit {
   // TODO: small delay on change
   public _planNames = planNames;
   public schoolClubString: string = 'School Club';

@@ -16,7 +16,7 @@ import { ratesContentImage } from './rates-feature-data';
   styleUrls: ['./rates-feature.component.less']
 })
 export class RatesFeatureComponent {
-  public pathName: string = PathNames.plans;
+  public pathName: string = PathNames.fees;
   public _contentImage: IContentImage = ratesContentImage;
   public _contentTitle = 'Great Care';
   public _contentSubtitle = 'For Even Greater Prices';

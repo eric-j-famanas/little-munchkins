@@ -4,7 +4,7 @@ import { AboutModule } from './about/about.module';
 import { DayToDayModule } from './day-to-day/day-to-day.module';
 import { FacilitiesModule } from './facilities/facilities.module';
 import { HomeModule } from './home/home.module';
-import { PlansModule } from './plans/plans.module';
+import { FeesModule } from './fees/fees.module';
 import { PoliciesModule } from './policies/policies.module';
 
 @NgModule({
@@ -15,7 +15,7 @@ import { PoliciesModule } from './policies/policies.module';
     AboutModule,
     DayToDayModule,
     FacilitiesModule,
-    PlansModule,
+    FeesModule,
     PoliciesModule,
   ],
   exports: [
@@ -23,7 +23,7 @@ import { PoliciesModule } from './policies/policies.module';
     AboutModule,
     DayToDayModule,
     FacilitiesModule,
-    PlansModule,
+    FeesModule,
     PoliciesModule,
   ]
 })

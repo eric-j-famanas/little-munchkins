@@ -2,11 +2,11 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ContentModule } from '../../general/content/content.module';
 import { PlanCalculatorModule } from './plan-calculator/plan-calculator.module';
-import { PlansComponent } from './plans.component';
+import { FeesComponent } from './fees.component';
 
 @NgModule({
   declarations: [
-    PlansComponent
+    FeesComponent
   ],
   imports: [
     CommonModule,
@@ -14,5 +14,5 @@ import { PlansComponent } from './plans.component';
     ContentModule,
   ]
 })
-export class PlansModule {
+export class FeesModule {
 }

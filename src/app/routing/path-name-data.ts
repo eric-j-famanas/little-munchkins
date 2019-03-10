@@ -3,7 +3,7 @@ import { IContentImage } from '../general/content/content-image/content-image';
 import { AboutComponent } from '../pages/about/about.component';
 import { DayToDayComponent } from '../pages/day-to-day/day-to-day.component';
 import { FacilitiesComponent } from '../pages/facilities/facilities.component';
-import { PlansComponent } from '../pages/plans/plans.component';
+import { FeesComponent } from '../pages/fees/fees.component';
 import { PoliciesComponent } from '../pages/policies/policies.component';
 import { formatName } from '../utilities/string-formatters';
 
@@ -11,7 +11,7 @@ export enum PathNames {
   home = 'home',
   about = 'about',
   dayToDay = 'day-to-day',
-  plans = 'plans',
+  fees = 'fees',
   facilities = 'facilities',
   policies = 'policies'
 }
@@ -44,9 +44,9 @@ export const pathNameDataSet: Map<string, PathData> = new Map([
     }
   ],
   [
-    PathNames.plans,
+    PathNames.fees,
     {
-      viewName: formatName(PathNames.plans),
+      viewName: formatName(PathNames.fees),
       icon: 'query_builder',
     }
   ],
@@ -68,7 +68,7 @@ export const pathNameDataSet: Map<string, PathData> = new Map([
 
 export const pageRoutes: Routes = [
   { path: PathNames.about, component: AboutComponent },
-  { path: PathNames.plans, component: PlansComponent },
+  { path: PathNames.fees, component: FeesComponent },
   { path: PathNames.facilities, component: FacilitiesComponent },
   { path: PathNames.dayToDay, component: DayToDayComponent },
   { path: PathNames.policies, component: PoliciesComponent },
