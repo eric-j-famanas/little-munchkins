@@ -1,7 +1,7 @@
 import { IContentImage } from '../../general/content/content-image/content-image';
 import { ILightboxEntry } from '../../general/lightbox-wrapper/lightbox-entry';
 
-export const DayToDayAlbum = (): ILightboxEntry[] => {
+export const ActivitiesAlbum = (): ILightboxEntry[] => {
   const album: ILightboxEntry[] = [];
 
   for (let i = 1; i <= 7; i++) {

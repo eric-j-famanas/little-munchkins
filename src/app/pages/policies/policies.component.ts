@@ -12,10 +12,10 @@ import { IPoliciesData, policiesContentImage, policiesData, policiesParagraphOne
       </app-content-template>
       <app-content-parapgraph [contentParagraph]="_contentParagraphOne"></app-content-parapgraph>
       <app-content-parapgraph [contentParagraph]="_contentParagraphTwo"></app-content-parapgraph>
-      <app-pdf-wrapper *ngFor="let policy of _policiesData"
-                       [pdfTitle]="policy.pdfTitle"
-                       [pdfLink]="policy.pdfLink">
-      </app-pdf-wrapper>
+      <!--<app-pdf-wrapper *ngFor="let policy of _policiesData"-->
+                       <!--[pdfTitle]="policy.pdfTitle"-->
+                       <!--[pdfLink]="policy.pdfLink">-->
+      <!--</app-pdf-wrapper>-->
     </div>
   `,
   styleUrls: ['./policies.component.less']

@@ -19,7 +19,7 @@ import { firstParagraph, mealsContentImage, secondParagraph } from './meals-data
 })
 export class MealsComponent implements IContentTemplate {
 
-  public headerTitle = 'Our Daily Routine';
+  public headerTitle = 'Our Daily Meals';
   public subHeaderTitle = 'What We Do, What We Eat, and How We Grow';
 
   public _dayToDayContentImage: IContentImage = mealsContentImage;
