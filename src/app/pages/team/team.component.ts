@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IContentImage } from '../../general/content/content-image/content-image';
 import { IContentTemplate } from '../../general/content/content-template/content-template';
 import { IProfileCard } from '../../general/profile-card/profile-card';
-import { aboutContentImage, profileRows } from './about-data';
+import { aboutContentImage, profileRows } from './team-data';
 
 @Component({
   selector: 'app-about',
@@ -22,16 +22,17 @@ import { aboutContentImage, profileRows } from './about-data';
       </app-content-parapgraph>
     </div>
   `,
-  styleUrls: ['./about.component.less']
+  styleUrls: ['./team.component.less']
 })
-export class AboutComponent implements IContentTemplate {
+export class TeamComponent implements IContentTemplate {
 
-  public headerTitle: string = 'Our Business, Our People';
+  public headerTitle: string = 'Meet the Team';
   public subHeaderTitle: string = 'We Treat Your Little Munchkins as Our Own';
 
-  public firstParagraph = 'We take great pride in our setting, providing safe and secure facilities and homely atmosphere.';
-  public secondParagraph = 'Our staff is here to ensure that all children’s lives are enriched as best as possible,' +
-    'believing that every child should have the greatest start they can to help them in life.';
+  public firstParagraph = 'We employ qualified and friendly team of childcare practitioners that are all DBS checked and offer knowledge' +
+    'and experience in childcare and education but also child protection and first aid.';
+  public secondParagraph = 'Our staff is here to ensure that all children’s lives are enriched as best as possible, believing that every ' +
+    'child should have the greatest start they can to help them in life.';
 
   public _aboutContentImage: IContentImage = aboutContentImage;
   public _profileRows: IProfileCard[][] = profileRows;

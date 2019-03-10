@@ -1,12 +1,12 @@
 import { IContentImage } from '../../general/content/content-image/content-image';
 
 export const plansContentImage: IContentImage = {
-  default: 'assets/banners/fees/plans_main.jpg',
-  GT_LG: 'assets/banners/fees/plans_GT_LG.jpg',
-  GT_MD: 'assets/banners/fees/plans_GT_MD.jpg',
-  GT_SM: 'assets/banners/fees/plans_GT_SM.jpg',
-  GT_XS: 'assets/banners/fees/plans_GT_XS.jpg',
-  XS: 'assets/banners/fees/plans_XS.jpg',
+  default: 'assets/banners/fees/fees_main.jpg',
+  GT_LG: 'assets/banners/fees/fees_GT_LG.jpg',
+  GT_MD: 'assets/banners/fees/fees_GT_MD.jpg',
+  GT_SM: 'assets/banners/fees/fees_GT_SM.jpg',
+  GT_XS: 'assets/banners/fees/fees_GT_XS.jpg',
+  XS: 'assets/banners/fees/fees_XS.jpg',
   alt: 'Little Munchkins Plans'
 };
 

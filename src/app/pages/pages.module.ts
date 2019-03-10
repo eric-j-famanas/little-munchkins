@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AboutModule } from './about/about.module';
+import { TeamModule } from './team/team.module';
 import { DayToDayModule } from './day-to-day/day-to-day.module';
 import { FacilitiesModule } from './facilities/facilities.module';
 import { HomeModule } from './home/home.module';
@@ -12,7 +12,7 @@ import { PoliciesModule } from './policies/policies.module';
   imports: [
     CommonModule,
     HomeModule,
-    AboutModule,
+    TeamModule,
     DayToDayModule,
     FacilitiesModule,
     FeesModule,
@@ -20,7 +20,7 @@ import { PoliciesModule } from './policies/policies.module';
   ],
   exports: [
     HomeModule,
-    AboutModule,
+    TeamModule,
     DayToDayModule,
     FacilitiesModule,
     FeesModule,
