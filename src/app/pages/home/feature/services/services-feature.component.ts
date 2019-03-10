@@ -16,7 +16,7 @@ import { servicesContentImage } from './services-feature-data';
   styleUrls: ['./services-feature.component.less']
 })
 export class ServicesFeatureComponent {
-  public pathName: string = PathNames.facilities;
+  public pathName: string = PathNames.about;
   public _contentImage = servicesContentImage;
   public _contentTitle = 'Fantastic Facilities';
   public _contentSubtitle = 'Your Child\'s Second Home';

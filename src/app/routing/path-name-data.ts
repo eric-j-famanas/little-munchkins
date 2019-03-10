@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { IContentImage } from '../general/content/content-image/content-image';
 import { TeamComponent } from '../pages/team/team.component';
 import { DayToDayComponent } from '../pages/day-to-day/day-to-day.component';
-import { FacilitiesComponent } from '../pages/facilities/facilities.component';
+import { AboutComponent } from '../pages/about/about.component';
 import { FeesComponent } from '../pages/fees/fees.component';
 import { PoliciesComponent } from '../pages/policies/policies.component';
 import { formatName } from '../utilities/string-formatters';
@@ -12,7 +12,7 @@ export enum PathNames {
   team = 'team',
   dayToDay = 'day-to-day',
   fees = 'fees',
-  facilities = 'facilities',
+  about = 'about',
   policies = 'policies'
 }
 
@@ -51,9 +51,9 @@ export const pathNameDataSet: Map<string, PathData> = new Map([
     }
   ],
   [
-    PathNames.facilities,
+    PathNames.about,
     {
-      viewName: formatName(PathNames.facilities),
+      viewName: formatName(PathNames.about),
       icon: 'business',
     }
   ],
@@ -69,7 +69,7 @@ export const pathNameDataSet: Map<string, PathData> = new Map([
 export const pageRoutes: Routes = [
   { path: PathNames.team, component: TeamComponent },
   { path: PathNames.fees, component: FeesComponent },
-  { path: PathNames.facilities, component: FacilitiesComponent },
+  { path: PathNames.about, component: AboutComponent },
   { path: PathNames.dayToDay, component: DayToDayComponent },
   { path: PathNames.policies, component: PoliciesComponent },
 ];

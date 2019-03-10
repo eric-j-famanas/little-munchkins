@@ -22,5 +22,5 @@ import { FeesCalculatorDialogComponent } from './dialog/fees-calculator-dialog.c
     FeesCalculatorComponent,
   ]
 })
-export class PlanCalculatorModule {
+export class FeesCalculatorModule {
 }
