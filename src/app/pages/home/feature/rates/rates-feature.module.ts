@@ -1,6 +1,7 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FeatureModule } from '../../../../general/feature/feature.module';
+import { NgModule } from '@angular/core';
+import { MaterialModule } from '../../../../material/material.module';
+import { AppRoutingModule } from '../../../../routing/app-routing.module';
 import { RatesFeatureComponent } from './rates-feature.component';
 
 @NgModule({
@@ -9,10 +10,12 @@ import { RatesFeatureComponent } from './rates-feature.component';
   ],
   imports: [
     CommonModule,
-    FeatureModule,
+    MaterialModule,
+    AppRoutingModule,
   ],
   exports: [
     RatesFeatureComponent
   ]
 })
-export class RatesFeatureModule { }
+export class RatesFeatureModule {
+}
