@@ -26,6 +26,10 @@ export const activitiesContentImage: IContentImage = {
   alt: 'Little Munchkins Activities'
 };
 
+export const firstParagrpah = 'We are sure to keep our Little Munchkins ' +
+  'both healthy and having fun. Your children will participate' +
+  'in fun activities such as flippy flops and yoga, sports activities, and educational activities to promote mental growth';
+
 export const features: string[] = [
   'Daily physical activities such as Flippy Flops and Yoga',
   'Oak Activities',

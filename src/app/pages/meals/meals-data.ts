@@ -16,6 +16,6 @@ export const firstParagraph = 'At Little Munchkins we offer home cooked meals an
 
 export const secondParagraph = 'Little Munchkins offer breakfast, lunch and afternoon dinner; light snacks, ' +
   'including fresh fruit and vegetables, as well as drinks, are available throughout the day. ' +
-  'The nursery cook freshly prepares all activites on site. Food might be liquidised/ blended for ' +
+  'The nursery cook freshly prepares all activities on site. Food might be liquidised/ blended for ' +
   'younger children or alternatively parents can provide pre-prepared food. We also provide ' +
   'purred fruit and vegetables for weaning babies.';

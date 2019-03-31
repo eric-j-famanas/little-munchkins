@@ -8,7 +8,7 @@ import { firstParagraph, mealsContentImage, secondParagraph } from './meals-data
   template: `
     <div class="content-wrapper">
       <app-content-template [headerTitle]="headerTitle" [subHeaderTitle]="subHeaderTitle">
-        <app-content-image [contentImage]="_dayToDayContentImage"></app-content-image>
+        <app-content-image [contentImage]="_mealsContentImage"></app-content-image>
       </app-content-template>
       <app-content-parapgraph [contentParagraph]="'What We Eat:'"></app-content-parapgraph>
       <app-content-parapgraph [contentParagraph]="_firstParagraph"></app-content-parapgraph>
@@ -20,9 +20,9 @@ import { firstParagraph, mealsContentImage, secondParagraph } from './meals-data
 export class MealsComponent implements IContentTemplate {
 
   public headerTitle = 'Our Daily Meals';
-  public subHeaderTitle = 'What We Do, What We Eat, and How We Grow';
+  public subHeaderTitle = 'What We Eat, and How We Grow';
 
-  public _dayToDayContentImage: IContentImage = mealsContentImage;
+  public _mealsContentImage: IContentImage = mealsContentImage;
   public _firstParagraph = firstParagraph;
   public _secondParagraph = secondParagraph;
 }

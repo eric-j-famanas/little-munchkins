@@ -31,7 +31,7 @@ export const features: string[] = [
   'Three different rooms: Under 2s Room, Toddler Room, and Preschool Room',
   'Comfortable sleeping arrangements for nap times',
   'Lots of resources and books for all ages',
-  'An on-site kitchen where home-cooked activites are made',
+  'An on-site kitchen where home-cooked activities are made',
   'Child bathrooms with height-appropriate toilets and sinks',
   'Potty training about and equipment',
   'Large area for parking prams and buggies on the premises',
