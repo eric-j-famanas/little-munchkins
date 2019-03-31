@@ -35,7 +35,7 @@ export const profileRowTwo: IProfileCard[] = [
     subtitle: 'Deputy Manager'
   },
   {
-    src: staffSrc('default'),
+    src: staffSrc('monika_pilarczyk'),
     name: 'Monika Pilarczyk',
     subtitle: 'Nursery Chef'
   }
@@ -66,12 +66,12 @@ export const profileRowFour: IProfileCard[] = [
     subtitle: 'Level 3 Practitioner'
   },
   {
-    src: staffSrc('default'),
+    src: staffSrc('shannon_rodgers'),
     name: 'Shannon Rodgers',
     subtitle: 'Level 3 Apprentice'
   },
   {
-    src: staffSrc('default'),
+    src: staffSrc('chloe_rodgers'),
     name: 'Chloe Rodgers',
     subtitle: 'Level 2 Practitioner'
   }
