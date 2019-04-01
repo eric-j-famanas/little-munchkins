@@ -14,7 +14,7 @@ export const facilitiesContentImage: IContentImage = {
 export const FacilitiesAlbum = (): ILightboxEntry[] => {
   const album: ILightboxEntry[] = [];
 
-  for (let i = 1; i <= 13; i++) {
+  for (let i = 1; i <= 20; i++) {
     const filename = `fac${i}.jpg`;
     album.push({
       src: `assets/facilities/img/${filename}`,
