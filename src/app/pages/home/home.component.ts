@@ -5,8 +5,8 @@ import { Component } from '@angular/core';
   template: `
     <div class="content-wrapper" style="position: relative">
       <app-rates-feature></app-rates-feature>
-      <app-footer [showMap]=true></app-footer>
     </div>
+    <app-footer [showMap]=true></app-footer>
   `,
   styleUrls: ['./home.component.less']
 })
