@@ -12,6 +12,7 @@ import { ActivitiesAlbum, activitiesContentImage, firstParagrpah } from './activ
       <app-content-parapgraph>
         <app-lightbox-wrapper [album]="_album"></app-lightbox-wrapper>
       </app-content-parapgraph>
+      <app-footer [showMap]=false></app-footer>
     </div>
   `,
   styleUrls: ['./activities.component.less']

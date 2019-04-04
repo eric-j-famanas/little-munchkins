@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { GeneralModule } from '../../general/general.module';
 import { MaterialModule } from '../../material/material.module';
 import { HomeFeatureModule } from './feature/home-feature.module';
 import { HomeComponent } from './home.component';
@@ -11,7 +12,8 @@ import { HomeComponent } from './home.component';
   imports: [
     CommonModule,
     MaterialModule,
-    HomeFeatureModule
+    HomeFeatureModule,
+    GeneralModule,
   ],
   exports: [
     HomeComponent,

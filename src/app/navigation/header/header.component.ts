@@ -13,7 +13,7 @@ import { PathData } from '../../routing/path-name-data';
         </button>
       </div>
       <div>
-        <a routerLink="/home" (click)="navigatingHome.emit(true)">
+        <a routerLink="/home">
           <img class="logo"
                alt="{{logoImage.alt}}"
                src="{{logoImage.default}}"
@@ -27,7 +27,7 @@ import { PathData } from '../../routing/path-name-data';
       </div>
       <div fxFlex fxLayout fxLayoutAlign="end" fxHide fxShow.gt-xs>
         <ul fxLayout fxLayoutGap="15px" class="navigation-items">
-          <li *ngFor="let route of pathRoutes" (click)="navigatingHome.emit(false)">
+          <li *ngFor="let route of pathRoutes">
             <a routerLink="/{{route.path}}">{{getViewName(route.path)}}</a>
           </li>
         </ul>
@@ -38,7 +38,6 @@ import { PathData } from '../../routing/path-name-data';
 })
 export class HeaderComponent {
   @Output() sidenavToggle: EventEmitter<void> = new EventEmitter<void>();
-  @Output() navigatingHome: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   @Input() pathRoutes: Array<Route>;
   @Input() pathData: Map<string, PathData>;

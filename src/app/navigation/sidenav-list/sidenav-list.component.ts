@@ -18,13 +18,11 @@ import { PathData } from '../../routing/path-name-data';
 })
 export class SidenavListComponent {
   @Output() sidenavClose: EventEmitter<void> = new EventEmitter<void>();
-  @Output() navigateHome: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   @Input() pathRoutes: Array<Route>;
   @Input() pathData: Map<string, PathData>;
 
   public onSidenavClose() {
     this.sidenavClose.emit();
-    this.navigateHome.emit(false);
   }
 }

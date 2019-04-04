@@ -20,6 +20,7 @@ import { FacilitiesAlbum, facilitiesContentImage, features } from './about-data'
         <app-lightbox-wrapper [album]="_album"></app-lightbox-wrapper>
       </app-content-parapgraph>
       <app-content-parapgraph [contentParagraph]="contentParagraphFour"></app-content-parapgraph>
+      <app-footer [showMap]=false></app-footer>
     </div>
   `,
   styleUrls: ['./about.component.less']

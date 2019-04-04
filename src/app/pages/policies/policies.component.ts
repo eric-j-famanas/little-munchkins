@@ -16,6 +16,7 @@ import { IPoliciesData, policiesContentImage, policiesData, policiesParagraphOne
                        [pdfTitle]="policy.pdfTitle"
                        [pdfLink]="policy.pdfLink">
       </app-pdf-wrapper>
+      <app-footer [showMap]=false></app-footer>
     </div>
   `,
   styleUrls: ['./policies.component.less']

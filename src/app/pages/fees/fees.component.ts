@@ -35,6 +35,7 @@ import { clubName, clubRate, planFullRates, planHalfRates, planNames, plansConte
       <div class="calculator-wrapper">
         <app-plan-calculator></app-plan-calculator>
       </div>
+      <app-footer [showMap]=false></app-footer>
     </div>
   `,
   styleUrls: ['./fees.component.less']

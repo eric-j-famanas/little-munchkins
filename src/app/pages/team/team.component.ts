@@ -20,6 +20,7 @@ import { aboutContentImage, profileRows } from './team-data';
           </div>
         </div>
       </app-content-parapgraph>
+      <app-footer [showMap]=false></app-footer>
     </div>
   `,
   styleUrls: ['./team.component.less']

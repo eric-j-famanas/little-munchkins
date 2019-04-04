@@ -13,6 +13,7 @@ import { firstParagraph, mealsContentImage, secondParagraph } from './meals-data
       <app-content-parapgraph [contentParagraph]="'What We Eat:'"></app-content-parapgraph>
       <app-content-parapgraph [contentParagraph]="_firstParagraph"></app-content-parapgraph>
       <app-content-parapgraph [contentParagraph]="_secondParagraph"></app-content-parapgraph>
+      <app-footer [showMap]=false></app-footer>
     </div>
   `,
   styleUrls: ['./meals.component.less']
