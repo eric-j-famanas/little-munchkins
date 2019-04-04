@@ -2,24 +2,42 @@
   padding: 20px 0;
 }
 
-.rates-table {
-  text-align: left;
-  padding-left: 5px;
-  width: 50%;
+.table {
+  display: flex;
+  flex-direction: column;
+}
 
-  & th {
-    border: 1px solid black;
-  }
+.table-header {
+  font-size: large;
+  padding-top: 10px;
+  color: #c2185b;
+}
 
-  & tr > td{
-    border: 1px solid black;
-  }
+.table-row {
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+}
 
-  & tr td {
-    min-width: 50px;
-  }
+.table-cell {
+  flex: 1;
+  background-color: lightskyblue;
+  color: white;
+  text-align: center;
+  border-left: 1px solid ghostwhite;
+  border-right: 1px solid ghostwhite;
+}
 
-  & tr td:first-child {
-    min-width: 100px;
-  }
+.table-cell-header, .table-cell-body, .table-header {
+  height: 30px;
+  line-height: 30px;
+}
+
+.table-cell-header {
+  background-color: deepskyblue;
+}
+
+.table-cell-body {
+  font-size: large;
+  font-weight: bold;
 }

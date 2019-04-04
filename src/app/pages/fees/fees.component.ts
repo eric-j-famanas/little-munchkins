@@ -13,28 +13,21 @@ import { clubName, clubRate, planFullRates, planHalfRates, planNames, plansConte
       <app-content-parapgraph [contentParagraph]="contentParagraphOne">
       </app-content-parapgraph>
       <app-content-parapgraph>
-        <table class="rates-table">
-          <thead>
-          <th>Age Category</th>
-          <th>Half Day</th>
-          <th>Full Day</th>
-          </thead>
-          <tbody>
-          <tr *ngFor="let name of _planNames">
-            <td>{{name}}</td>
-            <td>£{{_planHalfRates[_planNames.indexOf(name)].toFixed(2)}}</td>
-            <td>£{{_planFullRates[_planNames.indexOf(name)].toFixed(2)}}</td>
-          </tr>
-          </tbody>
-        </table>
-        <p>{{_clubName}} : {{_clubRate.toFixed(2)}} pH</p>
+        <div *ngFor="let name of _planNames">
+          <div class="table-header">{{name}}</div>
+          <div class="table-row">
+            <div class="table-cell">
+              <div class="table-cell-header">Half Day:</div>
+              <div class="table-cell-body">£{{_planHalfRates[_planNames.indexOf(name)].toFixed(2)}}</div>
+            </div>
+            <div class="table-cell">
+              <div class="table-cell-header">Full Day:</div>
+              <div class="table-cell-body">£{{_planFullRates[_planNames.indexOf(name)].toFixed(2)}}</div>
+            </div>
+          </div>
+        </div>
+        <p class="table-header">{{_clubName}} : {{_clubRate.toFixed(2)}} pH</p>
       </app-content-parapgraph>
-      <app-content-parapgraph [contentParagraph]="contentParagraphTwo">
-        <h6>** calculator is used for estimates only. Contact Little Munchkins to get a direct quote</h6>
-      </app-content-parapgraph>
-      <div class="calculator-wrapper">
-        <app-plan-calculator></app-plan-calculator>
-      </div>
       <app-footer [showMap]=false></app-footer>
     </div>
   `,

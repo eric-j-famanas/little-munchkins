@@ -4,7 +4,7 @@ import { Component, Input } from '@angular/core';
   selector: 'app-content-parapgraph',
   template: `
     <div class="content-paragraph">
-      <p>
+      <p class="paragrpah">
         {{ contentParagraph }}
       </p>
       <ng-content></ng-content>

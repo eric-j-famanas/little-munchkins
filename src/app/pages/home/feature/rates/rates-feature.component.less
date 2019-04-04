@@ -5,9 +5,10 @@
 }
 
 .image-wrapper {
-
+  background-color: deepskyblue;
   & img {
-    width: 100%;
+    margin: 0 10%;
+    width: 80%;
     height: auto;
   }
 }
@@ -15,36 +16,30 @@
 .titleWrapper {
   position: absolute;
   top: 20%;
-  left: 10%;
+  left: 15%;
   color: white;
   text-align: left;
+  background-color: rgba(135,206,250 ,0.75);
+  padding: 0 10px;
 }
 
 h1 {
-  font-size: xx-large;
-}
-
-h2 {
   font-size: x-large;
 }
 
 button {
   position: absolute;
-  top: 70%;
-  left: 10%;
+  top: 30%;
+  left: 15%;
   border: 1px solid deepskyblue;
 }
 
 @media screen and (max-width: 425px) {
   .titleWrapper {
-    top: 80%;
+    top: 10%;
   }
 
   h1 {
     font-size: large;
-  }
-
-  h2 {
-    font-size: medium;
   }
 }

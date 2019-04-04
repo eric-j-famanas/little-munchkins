@@ -12,7 +12,7 @@ import { FooterComponent } from './footer.component';
     FooterContentModule,
   ],
   exports: [
-    FooterComponent
+    FooterComponent,
   ]
 })
 export class FooterModule {

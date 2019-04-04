@@ -22,7 +22,7 @@ import { ratesContentImage } from './rates-feature-data';
     <div class="titleWrapper">
       <h1>{{contentTitle}}</h1>
     </div>
-    <button mat-flat-button routerLink="/{{pathName}}"> Learn More</button>
+    <button mat-flat-button routerLink="/{{pathName}}">Learn More</button>
   `,
   styleUrls: ['./rates-feature.component.less']
 })
